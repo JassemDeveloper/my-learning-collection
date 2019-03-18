@@ -1,0 +1,758 @@
+#Text Editor in shell 
+vim / nano
+------------------------------------
+#to create file/open it using text editor
+vim filename.extension
+nano filename.extension 
+------------------------------------
+#vim editor
+#insert mode
+i
+#exit from insert mode
+ESC(ESCAPE) button
+#To save data
+#wq means write and quit
+press : then write wq
+#to remove data 
+press backspace button
+------------------------------------
+#To create single line comment
+#
+------------------------------------
+#To clear the screen
+clear
+------------------------------------
+#To exit from the shell 
+exit
+------------------------------------
+#To print out to screen
+echo
+------------------------------------
+#To give excute permission to script file
+chmod +x filename.extension
+------------------------------------
+#To create variable
+varName=value
+------------------------------------
+#To avoid repeating echo
+cat <<EOF
+$varName
+EOF
+------------------------------------
+#To avoid repeating echo and redirect output to file
+cat >> file.extension <<EOF
+$varName
+EOF
+cat file.extension
+------------------------------------
+#to put line number when outputing data
+nl
+------------------------------------
+#To capture output from command
+$(commandName)
+------------------------------------
+#To print/get its value
+echo $varName
+------------------------------------
+#To get number of characters in string
+${#varName}
+------------------------------------
+#To convert from one number system to another
+$((systemNumberNeed#ConvertedNumber))
+$((2#111))
+------------------------------------
+#To separate more than one command in one line
+echo "first command" ; echo "second command"
+------------------------------------
+#one dot / two dotes
+. current directory
+.. previous directory
+------------------------------------
+#To copy file
+cp fileToBeCopiedFrom pathToBeCopiedTo
+------------------------------------
+#To move file 
+mv fileToBeMovedFrom pathToBeMovedTo
+------------------------------------
+#To rename file 
+mv fileToBeRename newFileName
+------------------------------------
+#To create loop 
+varArray="val1 val2 val3 val4"
+for newVar in $varArray
+do
+	echo $newVar
+done
+------------------------------------
+#do arithmetic operations 
+let "y=((x=20,10/2))"
+#only 10/2 will be considered
+echo $y
+------------------------------------
+#Convert letters lower case
+varName=StringValue
+#convert first letter to lower case
+${varName,}
+#convert all letters to lower case
+${varName,,}
+------------------------------------
+#Convert letters upper case
+varName=StringValue
+#convert first letter to upper case
+${varName^}
+#convert all letters to upper case
+${varName^^}
+------------------------------------
+#To escape special characters
+echo "\" Hi with double quotes \""
+------------------------------------
+#To look for specific data from command/log
+#grep
+ls --help | grep "\-U"
+------------------------------------
+#To output data into variable
+let y=20/2
+x=`echo $y`
+echo $x
+------------------------------------
+#To do nothing in if statement use : 
+if [ "" -gt num ]
+then :
+else
+	echo ""
+fi
+------------------------------------
+# use grep with if statment
+if
+grep -q keyWordToBeSearched file.extension
+then
+	echo yes it has the searched words
+else
+	echo no such word in the file
+fi 
+------------------------------------
+#To create zero byte files 
+touch filename.extension
+------------------------------------
+#To redirect data to file echo/cat
+echo " XXXX " > filename.extension
+cat filename.extension > filename1.extension
+------------------------------------
+#To output data in file
+cat filename.extension
+------------------------------------
+#To redirect data to file
+#redirect data with overwriting
+echo "" > filename.extension
+#redirect data without overwriting
+echo "" >> filename.extension
+#To add data to file and continue adding to it
+echo "Data 1" > filename.extension
+echo "More data" >> filename.extension
+------------------------------------
+#To clear data from file
+#create file if not exists/remove data if exists
+: > filename.extension
+------------------------------------
+#To remove file
+rm filename.extension
+------------------------------------
+#To remove files start with XX
+rm xx*
+------------------------------------
+#(*)special character can be used in a lot of things like search/rm etc
+grep XX*
+rm XX*
+ls XX*
+#(*)special character for multiply
+let varName=100*10
+#(**)special character for expansion
+let varName=100**3 
+------------------------------------
+#one variable is based on another
+varName=10
+echo $(( varName1= varName < 11?"Yes":"NO"))
+------------------------------------
+#parenthesis ()
+varArray=(val1 val2 val3 val4)
+varArray={val1 val2 val3 val4}
+#output multiple files into one file
+cat {file1,file2,file3} > filename.extension
+#To output range from 0 to 9
+echo {0..9}
+------------------------------------
+#To reinitialize variable
+unset varName
+------------------------------------
+#To read input from user
+read varName
+echo $varName
+------------------------------------
+#To add two values
+varName=10
+let "varName += 20"
+#To subtract two values
+varName=10
+let "varName -= 5" 
+------------------------------------
+#To execute command and assign result into variable
+varName=$(ls -l)
+echo $varName
+------------------------------------
+#to replace values with another
+varName=AB200
+newVarName=${varName/AB/1}
+------------------------------------
+#To pass parameters  from 1 to 9
+$1 $2 $3 until $9
+echo $1
+#To pass parameters from 10 and above
+${10} etc
+#To check number of arguments passed 
+$#
+#To get All passed arguments
+$*
+#To get the script Name
+$0
+------------------------------------
+#Return Values in Script
+#To Return exits status 
+$?
+#success return exit
+0
+#error 
+anything above 0
+#exit from script whether successful or not
+exit 0
+------------------------------------
+#Short version to redirect two files 
+&>
+------------------------------------
+#Conditional Statements
+#greater than
+-gt
+#greater than or equal
+-ge
+#lesser than
+-lt
+#lesser than or equal
+-le
+#equal 
+-eq 
+#not equal
+-ne
+#To check if file does not exist 
+! -f  
+#To check if  argument is given
+-z $1
+#To check if file exists
+-e
+#To check if file exists  and regular file
+-f
+#To check if file not zero size
+-s
+#To check if file readable by the executed user
+-r
+#To sort file/s and redirect it to another file
+cat filename filename1 | sort > file.extension
+#To evaluate condition and return its exit status ( 0 condition satisfied , 1 not satisfied)
+{{ 10 > 5 }}
+echo " Exit status $?" 
+------------------------------------
+#To make your function/variable available in all shells
+export functionName/varName
+------------------------------------
+#More about variables
+#TO get Process PID
+$$
+#To print the next echo in the same line
+echo -n ""
+#To get User ID
+$UID
+#To get Group ID
+$GROUPS
+#To get Home Directory
+$Home
+#To get Hostname
+$HOSTNAME
+#To get User
+$USER
+#To get Host Architecture
+$HOSTTYPE
+$MACHTYPE
+#To get OS type 
+$OSTYPE
+#IFS Internal field separator 
+varName="val1-val2-val3"
+IFS=-
+echo $varName
+#To get Line Number
+$LINENO
+#To get the previous PWD
+$OLDPWD
+#To get path of execute command
+$PWD
+#To check exit status for PIPE command |
+${PIPESTATUS[*]}
+#To get the reply from read command
+read 
+echo $REPLY
+#To get seconds
+$SECONDS
+#To declare read only variable
+declare -r varName=xx
+#To declare integer  variable
+declare -i varName=xx
+#To declare array  variable (index)
+declare -a varName=(val1 val2 val3 val4)
+#To declare array  variable (associated)
+declare -A varName=(val1 val2 val3 val4)
+#To declare function variable
+declare -f functionName
+#To create private variable in function
+typeset varName
+------------------------------------
+#Loops
+#for loops structure
+for newVarName in 1 2 3 4 5
+do
+echo $newVarName
+done
+#To make loop in sequence for loop
+seq 1 5
+for i in `seq 1 5`
+do
+done
+
+for i in {X...X}
+do
+done 
+#To use for loop to read from file
+for i in $(<file.extension)
+do
+done
+#To use for loop for find specific file/to file in current directory
+for i in *.extension
+do
+done
+for i in $(find . -name *.extension)
+do
+done
+#while loop
+counter=0
+while [counter -le 10 ]
+do
+	let "counter += 1"
+done 
+#To use while to read from command/file
+ls -l | while
+read x xx xxx 
+do 
+	echo $x
+	echo $xx
+	etc
+done
+#until loop
+counter=0
+until[counter -le 10 ]
+do
+	let "counter += 1"
+done
+  
+#######################################
+#case usage
+#######################################
+#Use Switch (case)
+echo -n ""
+read a
+case "$a" in
+ [[:lower:]] ) echo "Lower";;
+ [[:upper:]] ) echo "Upper";;
+ [0-9]		 ) echo "Digit";;
+ *			 ) echo "Special character";;
+#end of case/switch command
+esac
+------------------------------------
+#######################################
+#test usage
+#######################################
+#you can use below to do test conditions
+[[ condition to be tested ]]
+--
+or
+--
+(( condition to be tested ))
+--
+or
+-- 
+if [[ -f file.extension ]]
+--
+or
+--
+if
+test -f file.extension
+------------------------------------
+#test parameters
+#To test if it is a  directory
+test -d or [[ -d ]]
+#To test if it is a file
+test -f or [[ -f ]]
+#To test if file exists and contains data
+test -s or [[ -s ]]
+#To test if you have execute permission 
+test -x or [[ -x ]]
+#To test if you have write permission 
+test -w or [[ -w ]]
+#To test if you have read permission 
+test -r or [[ -r ]]
+------------------------------------
+#Note == is string compare , -eq is numeric compare
+# Comparison parameters with square brackets [[]] space is needed
+# equal
+[[ condition -eq condition ]]
+# not equal
+[[ condition -ne condition ]]
+# less than
+[[ condition -lt condition ]]
+# less than or equal
+[[ condition -le condition ]]
+# greater than
+[[ condition -gt condition ]]
+# greater than or equal
+[[ condition -ge condition ]]
+# Comparison parameters with parentheses  (()) no need for space
+# equal
+((condition == condition))
+# not equal
+((condition != condition))
+# less than
+((condition < condition))
+# less than or equal
+((condition <= condition))
+# greater than
+((condition > condition))
+# greater than or equal
+((condition >= condition))
+#To concatenate two condition
+#and 
+((condition && condition))
+#or
+((condition || condition))
+------------------------------------
+------------------------------------
+
+#select 
+#prompt  to select value
+PS3='Select Value'
+select value in "val1" "val2" "val3"
+do
+echo $value
+done
+
+--------------------------------------
+
+------------------------------------
+#printf command
+#To create new line
+printf "\n"
+#To format number
+printf "two decimal %1.2f\n" $varToBeConverted
+------------------------------------
+#read Command
+#To not echo the input
+-s
+#To specify (3) number of characters to be read
+-n3
+#To echo prompt
+-p "Message"
+#To read file 
+while read varName
+do
+	echo $varName
+done < file.extension
+
+#To use read with while
+while 
+read a b c d 
+do 
+	echo " First Word" $a
+	echo " Second Word" $b
+	echo " Third Word" $c
+	echo " The rest of Words in the line" $d
+
+done <file.extension
+
+------------------------------------
+##################################
+#Arithmetic Operators (()) or let
+##################################
+------------------------------------
+##################################
+#Filters 
+##################################
+# head / tail 
+#prints the  first n lines of a file or STDIN
+head
+#prints the  last n lines of a file or STDIN
+tail
+#To print only specific number of lines
+ls -la | head -numOfLines
+ls -la | tail -numOfLines 
+#To print only specific number of lines from file  and based on result get the last lines
+ls -l | head -numOfLines | tail -numOfLines
+#To print only the last two lines and keep following  file if it changes
+tail -n2 -f file.extension
+###################################
+# count words,lines and characters  in a file 
+#print number of lines
+wc -l file.extension
+###################################
+#sed command
+#To remove blank lines
+sed -e '1,/^$/d' -e '/^$/d' 
+#To substitute first word with another in one line
+sed 's/oldWord/newWord/' file.extension
+#To substitute all words with another globally
+sed 's/oldWord/newWord/g ' file.extension
+#To nest sed command 
+;
+sed 's/oldWord/newWord/; s/newWord/oldWord/'
+#To use regular expression
+#[xX] capital x or small xX
+#.* starts with
+sed 's/[xX]/XY/' -e 's/b.*n/oldWord/'
+#To print only need line sed
+-n
+sed -n '1,5p'
+#wantedWord if this word found on the line than change oldWord with newWord
+#replace word based on the line the word found
+sed '/wantedWord/s/oldWord/newWord/'
+#delete word based on the line the word found
+sed '/wantedWord/,/oldWord/newWord/d'
+#Do not change  based on the line the word found
+sed '/wantedWord/!s/oldWord/newWord/'
+###################################
+#Awk command
+#awk -f script
+###################################
+# echo all words in line 
+awk '{printf($0)}'
+# To run awk from file
+awk -f pattern fileToBeChanged.extension
+------------------------------------
+###################################
+#positional strings 
+###################################
+#To shift parameters 
+#this will shift value of $2 to $1 etc
+Shift $2 
+#To reference more than one variable
+echo  ${varName,varNa1}
+#To set default value to variable of x and varName
+x=${varName:=DefaultValue} 
+#To set default value to variable of x
+x=${varName:-DefaultValue} 
+#Start from (Text)
+varName="Some Tex  t"
+newVarName=${varName:numberOfCharatersToBeSkipped}
+#Start from (Text)  
+varName="Some Text"
+newVarName=${varName:numberOfCharatersToBeSkipped:numberOfCharatersToBeShown}
+#Count characters
+varName="Some Text"
+echo ${#varName}
+#To remove prefix
+${varName#*/FromThisString/}
+#To remove suffix
+${varName%.endWithThisString}
+#to replace values 
+tr oldWord newWord
+------------------------------------
+#tee to redirect data to STDOUT
+#getopt to get options
+#To run script in the background
+&
+#To kill job
+kill %ProcessNumber
+------------------------------------
+  #To execute certain command
+varName="ps -e"
+eval $varName 
+------------------------------------
+#set Command
+#to enable option for command
+set +o commandName
+#to disables option for command
+set -o commandName
+#To set var in script
+set `echo "$1 $2"`
+------------------------------------
+#To check jobs which running in the background
+jobs 
+#To start script in background
+scriptName &
+#To bring jobs into foreground by ID
+fg id
+#To wait for background jobs unit it completes
+wait
+#To prevent another job from running for short time
+sleep timeInSecondes
+#To show processes running
+ps aux
+#To kill process 
+kill ProcessPID
+------------------------------------
+
+------------------------------------
+#STDOUT,STDIN,STDERR
+#STDIN=0 Standard Input <
+#STDOUT=1 Standard Output >
+1>file.extension
+#STDERR=2 Standard Error 2>
+2>> file.extension
+#STDOUT && STDERR
+>> file.extension 2>&1
+#STDOUT && STDERR file created /overwritten
+commandName &> file.extension
+#STDOUT && STDERR in same place
+commandName 2>&1 | commandName
+or
+commandName |& commandName
+#STDOUT redirect data to end of  file if exits
+commandName >> file.extension
+#STDOUT & STDERR redirect data to end of  file if exits
+commandName &>> file.extension
+#STDOUT into script & avoid creating file
+commandName <<EOF
+....
+EOF
+########################
+#example of using  
+echo 12345 > file.extension
+#open file and assign file descriptive to it
+exec 3<>file.extension
+#read only two characters
+read -n 2 <&3
+#redirect decimal point to open file
+echo -n . >&3
+#close file
+exec 3>&-
+#show the result
+cat file.extension
+#####################
+#usage  of exec
+# Open file descriptor X for reading from
+exec X< file.extension
+# Open file descriptor X for writing to 
+exec X> file.extension
+# Open file descriptor X for writing and reading
+ exec X<> file.extension
+#To close file 
+exec X>&- 
+or
+exec X<&-
+#To list which files descriptors are open for process
+lsof
+lsof -p $$
+ 
+------------------------------------
+#To create functions 
+#structure
+function functionName(args)
+{
+your code 
+}
+#To return value from function
+function functionName()
+{
+	a=10
+	b=2
+	return a+b
+}
+newVar=$(functionName)
+echo $newVar # will print 12
+#To print function name (inside function only)
+$FUNCNAME
+#To call function
+functionName
+#If you name your function same as built-in function 
+command built-in function
+#call function with arguments
+functionName arg1 arg2 etc
+------------------------------------
+#arrays
+#declare array
+declare -a arrayName
+#initialize array
+arrayName=(val1 val2 val3 val4)
+arrayName=([0]="first" etc)
+#print array
+echo -e "${arrayName[0]}"
+#print size of array/single element
+${#arrayName[@]}
+#print all values in array
+${arrayName[*]}
+#clear array
+unset arrayName
+#loop in array using while loop
+count=${#arrayName[@]}
+i=0
+while [ "$i" -lt "$count" ]
+do
+echo ${arrayName[$i]}
+(( i++ ))
+done
+
+------------------------------------
+#Inline condition
+
+------------------------------------
+#To get help menu
+man commandName
+info commandName 
+------------------------------------
+#To count words
+wc
+------------------------------------
+#Script 
+#structure
+#!/bin/bash
+#when you run script using bash
+/bin/bash ./scriptName
+------------------------------------
+#To check which commands enabled
+enable
+------------------------------------
+#To check Keywords
+compgen -K
+------------------------------------
+##############################################
+##############################################
+
+#.bash_profile
+read when bash is invoed as login shell
+#.bashrc is executed whne new shell started
+------------------------------------
+#source command
+#To run script using source
+source ./scriptName
+. ./scriptName
+#running script via source will make variables
+#accessible from shell as if they were set on it
+------------------------------------
+#echo command
+#print in same line
+-n
+#enable backslash escaped characters 
+-e
+#disabled backslash escaped characters 
+-E
+------------------------------------
+------------------------------------
+------------------------------------
+------------------------------------
+------------------------------------
+------------------------------------
+------------------------------------
+------------------------------------
+------------------------------------

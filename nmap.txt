@@ -1,0 +1,7 @@
+#NMAP scan port on device 
+
+#install namp
+sudo apt-get install nmap
+
+#install python
+sudo easy_install python-namp

