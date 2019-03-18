@@ -1,0 +1,106 @@
+#Navigation tag > nav
+<nav> </nav>
+-----------------------
+#Heading > h1 -- h6 
+<h1> Text </h1>
+-----------------------
+#Deleting > del
+<del> Text </del>
+-----------------------
+#Highlight > mark
+<mark> Text </mark>
+-----------------------
+#paragraph > p
+<p> Text </p>
+-----------------------
+# line break > br 
+<br/>
+-----------------------
+#italic > i  
+<i> Text </i>
+-----------------------
+#bold > b  
+<b>Text</b>
+-----------------------
+#emphasis  > em
+<em> Text </em>
+-----------------------
+#horizontal line > hr 
+<hr>
+-----------------------
+#list item in ordered/unordered list   >  li 
+<li></li>
+-----------------------
+#unordered list > ul 
+<ul>
+<li>Text</li>
+</ul>
+-----------------------
+#ordered list > ol 
+<ol>
+<li>Text</li>
+</ol>
+-----------------------
+#Reference link  > a  
+<a href="LinkHere"> Text </a>
+-----------------------
+# new row , table heading table cells data > tr th td
+tr > when creating new row
+<tr></tr>
+th > when creating heading in table
+<th> Text </th>
+td > when creating data for the heading
+<td> Text </td>
+-----------------------
+# Table >> table
+<table border="1px" cellpading="2px" cellspacing="2px>
+<tr>
+<th>Head</th>
+</tr>
+<tr>
+<td> Data for Head </td>
+</tr>
+</table>
+-----------------------
+# iframe  container for web pages
+<iframe width="" height="" src="LinkHere" frameborder=""></iframe> 
+-----------------------
+# Form > form
+<form>
+</form>
+-----------------------
+# get input from users via > input 
+<lable> Text </lable>
+<input	type="specify" />
+-----------------------
+# create button via > button / input
+<button> Text Here </button>
+<input type="submit" value="Button" /> 
+-----------------------
+#image > img
+<img src="" alt="text for who can't see"/>
+-----------------------
+#To create division
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+
