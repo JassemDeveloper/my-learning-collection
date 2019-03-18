@@ -1,0 +1,58 @@
+#Learning Laravel
+To make Controller
+php artisan make:controller [Name]Controller
+php artisan make:controller PagesController 
+To make model  and do migration at the same time
+php artisan make:model [Name] -m
+
+To run the migration
+php artisan migrate
+
+To make controller with resource that deal with database
+php artisan make:controller PostsController --resource
+
+To map controller api to routes
+In route file web.php
+Route::resource('posts','PostsController');
+
+
+--------
+to pass variable from Controller to view
+In controller
+$title='Hi';
+return view('pages.index',compact('title'));
+return view('pages.index')->with('title',$title);
+In the view
+{{$title}}
+--------
+to pass array  from Controller to view
+In controller
+$data=array(
+	'title' => 'services',
+	'services'=>['One','Two','Three']
+);
+return view('pages.index',compact($data));
+return view('pages.index')->with($data);
+In the view
+{{$title}}
+and loop through nested elements
+@if(count($services)>0)
+	@foreach($services as $service)
+		<p> {{$service}} </p>
+	@endforeach
+@endif
+--------
+use this to add assets like css, javascript, images.. in to blade file.
+FOR CSS,
+<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+OR
+<link href="{{ URL::asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+FOR JS,
+<script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
+OR
+ <script type="text/javascript" src="{{ URL::asset('js/custom.js') }}"></script>
+FOR IMAGES,
+{{ asset('img/photo.jpg'); }} 
+--------
+--------
+--------

@@ -1,0 +1,39 @@
+# Search by file extension 
+filetype:XXX keyword ->  filetype:xlsx dashboard	
+#Search for info in specific site 
+keyword site:sitename -> 4g site:adslgate.com
+#It will show you results containing the keyword in the title of the search result.
+allintitle:keyword ->allintitle:CEH v10
+#Show you all results containing your keyword in result URL
+allinurl:Keyword -> allinurl:ceh v10
+#Show you all results containing your keyword in search Text.
+allintext:keyword -> allintext:ceh
+#Shows you link to the pages you’re looking for.
+allinanchor:keyword -> allinanchor:ceh
+#To look for sites based on its category gov , edu , org etc
+site:keyword -> site:edu
+#Remove unwanted terms from search result using “-” Operator
+keyword/s -unwanted keyword -> Tiger Speed -car
+#Search FTPs with Google
+keyword inurl:ftp -inurl:(http|https) -> ceh inurl:ftp -inurl:(http|https)
+inurl:ftp -inurl:(http|https) -> will search global
+#Find the definition instantly.
+define:keyword -> define:ceh
+# Find Exact Phrase you are Looking For – ” (Quotes) Operator
+"keyword" -> "CEH"
+#Narrow down results using AND & OR operator
+keyword or keyword -> ceh or programing
+
+#Let’s perform a more complex search as example
+site:keyword intitle:keyword intitle:keyword filetype:keyword | filetype:keyword | filetype:keyword
+#Below search will return you results from the educational website (.edu) having introduction and php in their title and file format will be pdf, ppt and doc.
+site:edu intitle:introduction intitle:php filetype:pdf | filetype:ppt | filetype:doc
+
+#No country 
+www.google.com/ncr
+#drag and drop an image from the computer for reverse image lookup.
+images.google.com 
+#library of different books.
+books.google.com
+#Find related site 
+related:keyword
