@@ -1,0 +1,234 @@
+#inline css style
+<tag style="color:red;"></tag>
+-----------------------
+#internal css style > in head only
+<style>
+tag{
+ color:red;
+}
+</style>
+-----------------------
+#external style
+<link rel="stylesheet" type="txt/css" href="StyleLink">
+-----------------------
+#to style an element either by using tag name / class value or id value
+#To target tag
+tag {
+  property  : value ;
+}
+#To target class
+.value {
+  property  : value ;
+}
+
+#To target class
+#value {
+  property  : value ;
+}
+-----------------------
+#CSS Color color Names / hex-code /rgb(0-255) 3 values
+color:red;
+color:#ffffff;
+color:rgb(x,x,x);
+-----------------------
+#linear gradient to combine two colors 
+background:linear-gradient(color1,color2); 
+-----------------------
+# Shadow   for text
+text-shadow:2px 2px 2px color;
+-----------------------
+# Shadow for anything other than text
+box-shadow:2px 2px 2px color;
+-----------------------
+#background image
+background-image:url(linkHere);
+#to prevent repeat 
+background-repeat:no-repeat;
+#to deal with white spaces
+background-size:cover;
+-----------------------
+#borders 
+border:1px solid/dashed color;
+border-bottom/border-top/border-left/border-right
+#To create rounded borders   
+border-radius:1px 1px 1px 1px;
+-----------------------
+#Descendent's selector  will apply style on nested levels
+parentSelect childSelector{
+	property: value;
+}
+-----------------------
+#Child selector   will apply style on first level
+parentSelect > childSelector{
+	property: value;
+}
+-----------------------
+# applying the same style on more selectors
+selector1 , selector2{
+	common properties 
+}
+-----------------------
+#Attribute selector
+
+[id="foo"]{
+}
+-----------------------
+#Specificity 
+{style attribute},{id},{class/attribute},{element}
+#!important will override  all style rules
+property: value !important;
+-----------------------
+#Fonts
+# to specify font for specific element
+font-family:font name;
+#if font name has more than one word use ""
+font-family:"font name";
+#To change font size , you can use pixels / rem units
+#it is preferable to use rem
+font-size:2rem;
+#To make text italic/bold etc
+font-style:italic;
+#To align text left/right/justify/center
+text-align:center;
+#To remove/add decoration to your text 
+text-decoration:none;
+#To add space between letters
+letter-spacing:10px;
+#To change text formation lowercase/uppercase
+text-transform:uppercase;
+-----------------------
+#To use google fonts
+#Go to google developer  site and use the font links
+-----------------------
+#To keep the image within the veiwport of device
+img{
+	max-width:100%;
+	height:auto;
+}
+-----------------------
+#To transfer transparent of background
+opacity:valueNeeded ; 
+-----------------------
+#To center an image
+img{
+display:block;
+margin:auto;
+}
+-----------------------
+#To add something after an element
+::after{
+
+}
+-----------------------
+#To add something before an element
+::before{
+	content:"";
+}
+
+-----------------------
+#margin & padding
+#To create margin outside the element
+margin:0px 0px 0px 0px;
+#To create padding inside element
+padding: 0px 0px 0px 0px;
+-----------------------
+#Create Custom Columns and rows
+.row{
+display:flex;
+width:100%;
+}
+
+.row::after{
+display:block;
+clear:both;
+content:"";
+}
+#divide 100/12 
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+
+*{
+box-sizing:border-box;
+}
+
+[class*="col-"]{
+}
+ 
+-----------------------
+#Things to understanding when building website
+#check 
+
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+-----------------------
+
