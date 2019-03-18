@@ -1,0 +1,309 @@
+#Python basics 
+#file extension 
+filename.py
+#python interpreter convert filename.py to byte code filename.pyc
+#Create Class
+class MyApp:
+#Create Class with Two Word
+class FirstApplication:
+#variables lower case if more than one word use underscore _
+avg=0;
+total_cost=0;
+#variables on same line
+x=0;y=1;z=0;
+#variables on multi-line
+x=item1 + \
+  item2 + \
+  item3
+  
+ amount=30
+ data="{} amount value ".format(amount)
+ 
+#Create method lower case if more than one word use underscore _
+def calculate():
+def calculate_cost():
+#comment
+
+use # for single line comment
+use """ for multi-line comment
+#to assign value to variables
+x=0
+x=y=z=20
+#to check variables types 
+x=10
+print(type(x))
+#variables in python divided into 6 basics categories
+1- numbers
+2- strings
+3- booleans 
+4- arrays without fixed size , they call it list
+5- arrays with fixed size and unchangeable , they call it tuples
+6- store data as keys  and values they call it dictionaries
+
+#Numbers in Python
+int x=3
+float  x-3.0
+complex x=4J
+#Strings
+x='strings'
+x="strings"
+x=""" multi-line line strings """ 
+#print
+print("Name","Jassem"); 
+#logical 
+boolean true or false
+if condition is true then it will return 1
+if condition is false then it will return 0
+#to check condition three ways
+if condition == true: 
+if condition == 1:
+if condition:
+#Store data in list  (Array)
+a=[]
+a=[1,2,3]
+a=['ja',2,'j']
+a=['j','jaa','kkk']
+#initialize list 
+data=[str] * 4
+data[0]='J'
+data[1]='a'
+data[2]='s'
+data[3]='s'
+#to append new elemnt into above list
+data.append('e')
+data.append('m')
+#to print above list 
+print("List :",data)
+#To check length of above list
+print("Length : ", len(data))
+
+#To create tuple with fixed size and unchangeable 
+a=()
+a=(1,2,3)
+a=('ja',2,'j')
+a=('j','jaa','kkk')
+
+#to create dictionary data type  
+data={
+	1:'one',
+	2:'two',
+	3:'three',
+	4:'four',
+	5:'five'
+	}
+data=dict(1:'one',2:'two'..etc)
+#to print value from above dictionary by key
+print(data[1])
+#to delete from array or list or dictionary
+del data['key']
+#to clear data from array or list or dictionary
+data.clear()
+#Operators in Python
+#arithmetic operators
+=,+,-,*,/,%
+** x=2**5= 2 * 2 * 2 * 2 * 2 = 32
+// x=8//5=1.6 ===> 2 after rounding the number
+#comparison operators
+==,!=,>=,=<,>,<
+#logical operators
+and,or,not,not(condition1 and condition2)
+#Bitwise operators
+&,|,^,~,<<,>>
+#Assignment operators
+=,+=,-=,*=,**=,/=,//=,%=,<<=,>>=,&=,^=,|=
+#Membership operators
+in,not in
+#Identity Operators
+is,is not
+#conditions 
+
+if condition:
+elif condition:
+else:
+
+#Loops
+for element in sequence:
+	statements
+
+days=['ja','ja1','ja2','ja3']
+for day in days:
+	print(day)
+	
+use range(start,end,increment)
+for i in range(1,5,1)
+	print(i)
+
+initialisation;
+while condition:
+	statements
+	
+	increment or decrement
+	
+	else:
+	print("This line will be executed when while loop stop")
+
+#infinite loop
+
+flag=1
+
+while flag==1:
+	print("infinite loop")
+	
+#create method and call it
+
+def main():
+	print("Hi")
+
+if __name__ == '__main__':main()
+
+#print using slice 
+print(arrayName[start:end])
+
+#use slice
+data=[1,2,3,4,5]
+#change all data
+data[:]=range(5)
+data[1:3]=range(0,0,0)
+
+#date Library
+import datetime
+#take input from user 
+input("Please enter something ")
+#to convert string to int or float
+float()
+int()
+# break and continue
+break will stop the loop if the value matches 
+continue will skip the letter if the value matches
+word="Hi Me"
+for w in word:
+	if(w=="H"):
+		continue
+	print(w)
+#functions / methods 
+def showMeYourName():
+	print("Your Name")
+def showMeYourName(name):
+	print("Your Name {}").format(name)
+
+#working with files
+# "w" for writing and overwriting 
+# "a" for writing and without overwriting
+def file():
+	#choose file for writing  "w"
+	out=open("test.txt","w")
+	#write on file
+	out.write("Writing")
+	out.close() 
+#reading file 
+def file():
+	#choose file for reading  "r"
+	readFrom=open("test.txt","r")
+	for read in readFrom:
+		print(read)
+	readFrom.close() 
+	
+	#exceptions 
+	try:
+		# code goes here
+	except IOError:
+		# exception goes here
+		print("File Not Found")
+	else:
+		print("Next Operation")
+
+#strings 
+data="welcome to First app IN Python"
+#get length
+len(data)
+#Lower case
+data.lower()
+#Upper case
+data.upper()
+#To split words 
+data.split()
+data.split("app")
+#To join words
+" ".join(data)
+":".join(data)
+#To find word when it starts (index)
+data.find("first")
+
+#classes
+class ClassName:
+#self similar to this keyword
+	def getOwner(self):
+		print("Owner")
+	def getOwner(self):
+		print("owner is " , self._name)
+	def setOwner(self,name):
+		self._name=name
+#class constructor
+def __init__(self,parameter,parameter1):
+	self._parameter=parameter
+	self._parameter1=parameter1
+def __init__(self,**kwargs):
+	self.data=kwargs
+
+def displayData(self):
+	print(self.data["parameter"])
+	
+#To create instance of class
+myinstance=ClassName()
+myinstance.getOwner()
+myinstance.getOwner("Hi")
+
+#create instance using constructor
+myinstance = ClassName(parameter="Value")
+myinstance.getOwner()
+
+
+#Inheritance
+class ClassName:
+	def method():
+	def method1():
+	
+#Below class will inheritance from above
+class ClassName1(ClassName):
+	def method3():
+
+#Override method
+write the same method with same name to override the inherited 
+
+#to import class into another class
+import ClassName
+
+#Regular Expression
+#to import regular expression library
+import re
+#to search 
+re.search("(startWith|startWit)endWIth",line)
+
+#SQL lite
+import sqlite3
+#connect to db
+db=sqlite3.connect("mydb.db")
+#create table
+db.execute("SQL query to create table")
+#to read from db
+db.row_factory=sqlite3.Row
+cursor=db.execute("select * from table")
+for row in cursor:
+	print(row["name"])
+#To commit
+#to confirm the action
+db.commit()
+
+#To read JSON file
+#import urllib.request,json
+import urllib.request,json
+data=urllib.request.urlopen("URL").read()
+#convert data to json
+jsonr=json.loads(data.decode("utf-8"))
+
+for item in jsonr["root"]
+	print(row["rowName"])
+
+#Graphics
+#import turtle library
+import turtle

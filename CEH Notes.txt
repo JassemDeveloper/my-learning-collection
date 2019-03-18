@@ -1,0 +1,53 @@
+Phases of Attack:
+1-Reconnaissance:
+gathering information about the target such as systems etc
+
+Passive Reconnaissance:
+No direct interaction with target such as using google to look for info.
+
+Active Reconnaissance:
+direct interaction with target such as calling the target or working in the company to get info.
+
+2-Scanning:
+will do scanning based on the information found about the target in Reconnaissance phase.
+port scanning, vulnerabilities scanning etc.
+
+3-Gaining Access:
+based on information acquired from scanning phase will try to gain access to the system.
+
+4-Maintaining Access:
+will maintain your access to compromised system such as install root-kits,back-doors etch
+
+5-Clearing Tracks:
+To hide your presence and the back-door in the compromised systems so that they do not tracked you
+such as  removing logs
+--------------
+Tools 
+
+1-Reconnaissance:
+	-Plug in to be use in browser Firebug
+	-Web data extractor
+	-Httrack
+	-metagoofil tool to find files for specific target 
+	-emailTrackerPro(windows version)
+	
+-----------
+how to use metagoofil ?
+
+To install it on Kali Linux
+apt-get install metagoofil
+To run the command just type
+metagoofil
+----------
+Email header  you can gain alot of information about the sender(target)
+----------
+whois is tool or site you can use to show information about a specific website
+----------
+how to use nslookup ?
+in cmd/terminal type nslookup
+Now you can specify which type you want to look for
+set type=XX i.e set type=a
+now you can look for the info you want in the specfied domain
+www.hackthissite.org
+
+
