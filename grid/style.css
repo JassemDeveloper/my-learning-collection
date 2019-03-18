@@ -1,0 +1,269 @@
+/*
+
+my css template
+
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.row:before,
+.row:after{
+        content: "";
+    display:table;
+    clear:both;
+}
+
+
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+
+[class*='col-']{
+    float: left;
+    min-height: 1px;
+    padding: 2px;
+}
+
+/*
+ Navigation
+*/
+
+
+.nav ul li a{
+    text-align: center;
+}
+.nav li{
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+}
+
+.nav ul ul {
+    margin-top: 5px;
+    position: absolute;
+    background: black;
+}
+.nav ul ul li{
+    display: none;
+
+}
+.nav ul ul li a{
+display: block;
+ width: 120px;
+}
+
+.nav ul li a:hover{
+    background: red;
+    color: white;
+}
+
+.nav ul li:hover  ul li{
+    display: block;
+}
+
+.nav-outer{
+    background: black;
+    height: 30px;
+}
+.nav-center{
+    display: table;
+    margin: 0 auto;
+}
+.center{
+    text-align: center;
+}
+
+/*
+
+forms
+
+*/
+
+form{
+    padding: 5px;
+}
+
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding:5px 0px;
+}
+
+.form-control-Regular{
+    display: block;
+    padding:5px 0px;
+    font-size: 18px;
+}
+
+.form-control-Regular,.form-control{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*
+table style later will style all tables
+*/
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table, .table td, .table th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th, .table td {
+    padding: 15px;
+}
+
+.border-solid,.border-solid td, .border-solid th{
+    border: solid;
+}
+
+.border-dashed,.border-dashed td, .border-dashed th{
+    border: dashed;
+}
+
+.border-outer-solid{
+    border: 2px solid black;}
+.border-outer-dashed{
+    border: 3px dashed black;
+}
+
+.style th{
+    background:  #476B6B;
+    color: white;
+}
+
+.style th{
+    background:  #476B6B;
+    color: white;
+}
+
+
+.style1 th{
+    background: #313151;
+    color: white;
+}
+
+
+/* 
+colors for everything
+*/
+
+.success{
+    background:#14824B;
+}
+.progress{
+    background: #B29600;
+}
+
+.waiting{
+    background:#6A8095;
+}
+.danger{
+    background: #8E0000;
+}
+.confirm{
+    background:#003666;
+}
+.regular{
+    background: #1E2B38;
+}
+
+
+/*
+
+box style
+*/
+
+.box{
+    margin-top:5px;
+    border: 1px solid black;
+    height: 100%;
+    word-wrap: break-word;
+    width: 235px;
+    margin-left: 5px;
+}
+
+.box-head{
+    margin-bottom: 2px;
+    border-bottom: 5px solid black;
+}
+
+.box-footer{
+    margin-top: 2px;
+    border-top: 5px solid black;
+}
+
+ .badge{
+    margin: 0 auto;
+    width:100%;
+    border-radius: 10px;
+    color: white;
+}
+.badge{
+    font-size: 7.5em;
+}
+
+
+.boxHide{
+    margin-top:5px;
+    height: 100%;
+}
+
+pre{
+    background:#262626
+;
+    padding:20px 5px 20px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    width:100%;
+    color: white;
+    font-size: 16px;
+}
+
