@@ -1,0 +1,9 @@
+Create new angular js project 
+1- ng new ProjectName
+2-cd ProjectName
+#start the project 
+3-ng serve
+4-modifiy a line in Project/src/index.html from <base href="/"> to <base href="./">
+5-ng build --prod
+6-copy dist folder
+7-past it in this directory xampp/htdocs/
